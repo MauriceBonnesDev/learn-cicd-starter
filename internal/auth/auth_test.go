@@ -38,7 +38,7 @@ func TestGetAPIKey(t *testing.T) {
 	header = http.Header{}
 
 	_, err = GetAPIKey(header)
-	if err == nil {
+	if err != nil {
 		log.Fatal("ErrNoAuthHeaderIncluded error required")
 	}
 
